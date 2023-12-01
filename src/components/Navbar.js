@@ -4,16 +4,16 @@ import { useState } from 'react';
 
 const Navbar = () => {
     let tabs = [
-        { id: "home", label: "Home", path: "/"},
-        { id: "projects", label: "Projects", path: "/projects" },
-        { id: "timeline", label: "Timeline", path: "/timeline" },
-        { id: "contact", label: "Contact", path: "/contact" },
+        { id: "home", label: "Home", path: "/code-portfolio-v2/"},
+        { id: "projects", label: "Projects", path: "/code-portfolio-v2/projects" },
+        { id: "timeline", label: "Timeline", path: "/code-portfolio-v2/timeline" },
+        { id: "contact", label: "Contact", path: "/code-portfolio-v2/contact" },
     ];
 
     let [activeTab, setActiveTab] = useState(tabs[0].id);
     return (
         <div className='flex justify-center '>
-            <nav className="fixed flex space-x-3 rounded-full bg-white-600/40 justify-center mt-4 shadow-black backdrop-blur-[0.5rem] border z-20">
+            <nav className="fixed flex space-x-3 rounded-full bg-white-600/40 justify-center mt-6 shadow-black backdrop-blur-[0.5rem] border z-20 p-1">
                 {tabs.map((tab) =>
                     <NavLink
                         key = {tab.id}
