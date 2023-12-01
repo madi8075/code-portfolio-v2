@@ -30,8 +30,8 @@ const Navbar = () => {
                         { activeTab === tab.id && (
                             <motion.span 
                                 layoutId='bubble'
-                                className='absolute inset-0 z-0 bg-white mix-blend-difference text-white rounded-full'
-                                transition={{ type: "spring", bounce: 0.4, duration: 0.6 }}
+                                className='absolute -inset-1 z-0 bg-white mix-blend-difference text-white rounded-full'
+                                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                             />
                         )}
                         <span className='z-24'>{tab.label}</span>

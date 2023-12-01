@@ -1,6 +1,7 @@
 import { type } from "@testing-library/user-event/dist/type";
 import React, { useState, useEffect } from "react";
 import Typewriter from 'typewriter-effect';
+import CareerTypewriter from "./CareerTypewriter";
 
 const MainTypewriter = ( { content }) => {
     const typewriterStyle = {
@@ -9,18 +10,22 @@ const MainTypewriter = ( { content }) => {
         fontWeight: '600',
         zIndex: 2,
         color: 'white',
+        whiteSpace: "pre-line",
+        cursor: "_",
     };
 
     return (
         <div style={typewriterStyle}>
-            <Typewriter 
+            <Typewriter
                 onInit={(typewriter) =>{
+                    typewriter.start()
                     typewriter.typeString(`${content}`)
-                    .start();
                 } }
                 options={{
-                    delay: 25,
-                    breakLines: true,
+                    delay: 50,
+                    autoStart: true,
+                    loop: false,
+                    deleteSpeed: 30,
                 }}
             />
         </div>
