@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/code-portfolio-v2/static/css/main.1b00f671.css",
-    "main.js": "/code-portfolio-v2/static/js/main.a85401e8.js",
+    "main.css": "/code-portfolio-v2/static/css/main.7e995fdc.css",
+    "main.js": "/code-portfolio-v2/static/js/main.618521d5.js",
     "static/js/787.d03852a3.chunk.js": "/code-portfolio-v2/static/js/787.d03852a3.chunk.js",
     "static/media/pic-circle.png": "/code-portfolio-v2/static/media/pic-circle.5cd99a3ae4fefa242398.png",
     "static/media/emblem.svg": "/code-portfolio-v2/static/media/emblem.5526618fca94db9d25ed2ee2154e2e4e.svg",
     "index.html": "/code-portfolio-v2/index.html",
-    "main.1b00f671.css.map": "/code-portfolio-v2/static/css/main.1b00f671.css.map",
-    "main.a85401e8.js.map": "/code-portfolio-v2/static/js/main.a85401e8.js.map",
+    "main.7e995fdc.css.map": "/code-portfolio-v2/static/css/main.7e995fdc.css.map",
+    "main.618521d5.js.map": "/code-portfolio-v2/static/js/main.618521d5.js.map",
     "787.d03852a3.chunk.js.map": "/code-portfolio-v2/static/js/787.d03852a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b00f671.css",
-    "static/js/main.a85401e8.js"
+    "static/css/main.7e995fdc.css",
+    "static/js/main.618521d5.js"
   ]
 }
