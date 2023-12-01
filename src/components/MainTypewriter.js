@@ -22,7 +22,7 @@ const MainTypewriter = ( { content }) => {
                     typewriter.typeString(`${content}`)
                 } }
                 options={{
-                    delay: 50,
+                    delay: 20,
                     autoStart: true,
                     loop: false,
                     deleteSpeed: 30,
