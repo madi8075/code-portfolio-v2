@@ -18,7 +18,7 @@ const MainTypewriter = ( { content, flag,  content1 }) => {
         <div style={ typewriterStyle }>
             <Typewriter
                 options={{
-                    delay: 30,
+                    delay: 20,
                     autoStart: true,
                     loop: false,
                     deleteSpeed: 30,

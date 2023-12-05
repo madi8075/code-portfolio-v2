@@ -23,8 +23,6 @@ const Home = () => {
                 </div>
         </div>
 
-        <Block color={'lime-800'}/>
-        <Block />
         
     </>
     );

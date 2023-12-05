@@ -13,12 +13,36 @@ const CareerTypewriter = ( {}) => {
         letterSpacing: "1.5px",
     });
 
+    const updateFontSize = () => {
+        const screenWidth = window.innerWidth;
+        let fontSize = '2em';
+    
+        // Adjust font size based on screen width
+        if (screenWidth <= 768) {
+          fontSize = '1.35em';
+        }
+
+        setTypewriterStyle({
+          ...typewriterStyle,
+          fontSize,
+        });
+      };
+
+    useEffect(() => {
+        updateFontSize();
+        window.addEventListener('resize', updateFontSize);
+
+        return () => {
+          window.removeEventListener('resize', updateFontSize);
+        };
+      }, []);
+
     let careers =[
         { label: "computer science student." },
         { label: "programmer." },
         { label: "full-stack developer." },
-        { label: "leader." },
         { label: "problem solver." },
+        { label: "leader." },
         { label: "hardware expert." },
         { label: "software expert." },
     ];
@@ -29,7 +53,7 @@ const CareerTypewriter = ( {}) => {
 
     return (
         <div style={wrapperStyle}>
-        <div className='' style={typewriterStyle}>
+        <div style={typewriterStyle}>
             <Typewriter
                 options={{
                     delay: 45,
@@ -39,8 +63,8 @@ const CareerTypewriter = ( {}) => {
                 }}
                 onInit={(typewriter) =>{
                     typewriter.typeString('Hi!')
-                    .pauseFor(600)
-                    .typeString(' My name is <strong><span style="color: greenyellow;">Madison Manuel.</span></strong>\n')
+                    .pauseFor(400)
+                    .typeString(' My name is <span style="color: greenyellow;">Madison Manuel.</span>\n')
                     .pauseFor(750)
                     .typeString(' I am a ')
                     .start()
@@ -58,9 +82,8 @@ const CareerTypewriter = ( {}) => {
                     .pauseFor(2000)
                     .deleteChars(32)
                     .typeString('<span style="color: greenyellow;">Let me show you what I can do</span>')
-                    .changeDelay(300)
+                    .changeDelay(375)
                     .typeString('<span style="color: greenyellow;">...</span>')
-                    .pauseFor(1000)
                 } }
             />
         </div>
