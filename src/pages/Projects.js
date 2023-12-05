@@ -14,8 +14,9 @@ const Projects = () => {
                 <div className='text-center'>
                     <MainTypewriter content={'Projects coming soon.'}/>
                 </div>
-
         </div>
+
+        <Block />
     </>
     );
 };

@@ -21,8 +21,10 @@ const Home = () => {
                         In my sophomore year of high school, a friend asked me to take a Java programming course with her. I had no experience nor any plan to major in Computer Science, but after writing my first “hello, world!” program I was hooked. With a newly discovered aptitude for Java, my teacher soon started sending me to help fellow classmates. This semester was the spark of my passion in Computer Science.
                     </div>
                 </div>
-                <MatrixRain show={true} style={{zIndex: -1}}/>
         </div>
+
+        <Block color={'lime-800'}/>
+        <Block />
         
     </>
     );
