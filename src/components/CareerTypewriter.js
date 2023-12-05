@@ -32,7 +32,7 @@ const CareerTypewriter = ( { content }) => {
         <div className='' style={typewriterStyle}>
             <Typewriter
                 options={{
-                    delay: 45,
+                    delay: 40,
                     autoStart: true,
                     loop: false,
                     deleteSpeed: 20,

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 const Navbar = () => {
     const { scrollY } = useScroll();
     const [navHide, setNavHidden] = useState(false);
-    
+
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const prevScroll = scrollY.getPrevious();
