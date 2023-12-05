@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -10,7 +10,14 @@ const Navbar = () => {
         { id: "contact", label: "Contact", path: "/code-portfolio-v2/contact" },
     ];
 
-    let [activeTab, setActiveTab] = useState(tabs[0].id);
+    const location = useLocation();
+
+    const [activeTab, setActiveTab] = useState(() =>  {
+        const currentTab = tabs.find((tab) => tab.path === location.pathname);
+        return currentTab ? currentTab.id : tabs[0].id;
+    });
+
+
     return (
         <div className='flex justify-center '>
             <nav className="fixed flex space-x-3 rounded-full bg-white-600/40 justify-center mt-6 shadow-black backdrop-blur-[0.5rem] border z-20 p-1">

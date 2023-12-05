@@ -12,57 +12,57 @@ const CareerTypewriter = ( { content }) => {
         whiteSpace: "pre-line",
         letterSpacing: "1.5px",
     });
-    const typewriterStyle2 = {
-        fontFamily: 'Arial, sans-serif',
-        fontSize: '2em',
-        fontWeight: '800',
-        zIndex: 2,
-        color: 'white',
-        whiteSpace: "pre-line",
-        letterSpacing: "2px",
-    };
 
     let careers =[
-        { id: 1, label: "Computer Science student." },
-        { id: 2, label: "programmer." },
-        { id: 3, label: "full-stack developer." },
-        { id: 4, label: "leader." },
-        { id: 5, label: "problem solver." },
-        { id: 6, label: "hardware expert." },
-        { id: 7, label: "software expert." },
+        { label: "computer science student." },
+        { label: "programmer." },
+        { label: "full-stack developer." },
+        { label: "leader." },
+        { label: "problem solver." },
+        { label: "hardware expert." },
+        { label: "software expert." },
     ];
 
+    const wrapperStyle = {
+        height: '90px',
+    }
+
     return (
-        <div style={typewriterStyle}>
+        <div style={wrapperStyle}>
+        <div className='' style={typewriterStyle}>
             <Typewriter
+                options={{
+                    delay: 45,
+                    autoStart: true,
+                    loop: false,
+                    deleteSpeed: 20,
+                }}
                 onInit={(typewriter) =>{
                     typewriter.changeDeleteSpeed(15)
                     .typeString(`${content}\n`)
                     .pauseFor(600)
-                    .typeString('I am a ')
+                    .typeString(' I am a ')
                     .start()
-                    .changeDelay(50)
 
                     careers.forEach((tab, index) => {
                         typewriter
                             .typeString(tab.label)
                             .pauseFor(1500)
                             .deleteChars(careers[index].label.length)
-                            .pauseFor(250)
+                            .pauseFor(200)
                     });
 
                     typewriter.deleteChars(2)
-                    .changeDelay(100)
-                    typewriter.typeString(' ready to join your team.')
+                    .typeString('<span style="color: greenyellow;">excited to join your team!</span>')
                     .pauseFor(2000)
+                    .deleteChars(32)
+                    .typeString('<span style="color: greenyellow;">Let me show you what I can do</span>')
+                    .changeDelay(400)
+                    .typeString('<span style="color: greenyellow;">...</span>')
+                    .pauseFor(1000)
                 } }
-                options={{
-                    delay: 50,
-                    autoStart: true,
-                    loop: true,
-                    deleteSpeed: 15,
-                }}
             />
+        </div>
         </div>
     );
 };

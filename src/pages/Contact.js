@@ -15,8 +15,6 @@ const Contact = () => {
                 </div>
 
         </div>
-        
-        <Block color = 'blue-500'/>
     </>
     );
 };

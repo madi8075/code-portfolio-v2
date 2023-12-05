@@ -15,8 +15,6 @@ const Timeline = () => {
                 </div>
 
         </div>
-        
-        <Block color = 'blue-500'/>
     </>
     );
 };
