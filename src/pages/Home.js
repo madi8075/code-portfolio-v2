@@ -5,6 +5,7 @@ import SkillSection from './Skills';
 import { AnimatePresence, motion } from 'framer-motion';
 import Projects from './Projects';
 import ProjectSection from './ProjectSection';
+import Contact from './Contact';
 
 
 const Home = () => {
@@ -40,6 +41,10 @@ const Home = () => {
 
         <AnimatePresence>
             <ProjectSection />
+        </AnimatePresence>
+
+        <AnimatePresence>
+            <Contact/>
         </AnimatePresence>
 
         
