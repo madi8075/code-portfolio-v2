@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/code-portfolio-v2/static/css/main.cb845993.css",
-    "main.js": "/code-portfolio-v2/static/js/main.61f9bafc.js",
+    "main.css": "/code-portfolio-v2/static/css/main.cd1eff02.css",
+    "main.js": "/code-portfolio-v2/static/js/main.5627bcae.js",
     "static/js/787.d03852a3.chunk.js": "/code-portfolio-v2/static/js/787.d03852a3.chunk.js",
     "static/media/green-hs-center.jpg": "/code-portfolio-v2/static/media/green-hs-center.f2fbe1c1fac6de950d53.jpg",
     "static/media/emblem.svg": "/code-portfolio-v2/static/media/emblem.5526618fca94db9d25ed2ee2154e2e4e.svg",
@@ -9,12 +9,12 @@
     "static/media/react.svg": "/code-portfolio-v2/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
     "index.html": "/code-portfolio-v2/index.html",
     "static/media/linkedin-icon.svg": "/code-portfolio-v2/static/media/linkedin-icon.27a3f479ca1bbb0ceef19e395081fb94.svg",
-    "main.cb845993.css.map": "/code-portfolio-v2/static/css/main.cb845993.css.map",
-    "main.61f9bafc.js.map": "/code-portfolio-v2/static/js/main.61f9bafc.js.map",
+    "main.cd1eff02.css.map": "/code-portfolio-v2/static/css/main.cd1eff02.css.map",
+    "main.5627bcae.js.map": "/code-portfolio-v2/static/js/main.5627bcae.js.map",
     "787.d03852a3.chunk.js.map": "/code-portfolio-v2/static/js/787.d03852a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb845993.css",
-    "static/js/main.61f9bafc.js"
+    "static/css/main.cd1eff02.css",
+    "static/js/main.5627bcae.js"
   ]
 }
