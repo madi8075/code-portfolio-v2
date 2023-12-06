@@ -12,7 +12,6 @@ const ProjectSection = () => {
                 transition={{ duration: 1}}
             >
                 <h className="flex justify-center text-5xl pt-64 pb-32">Projects</h>
-                <CodeBlock />
             </motion.div>
         </div>
     );

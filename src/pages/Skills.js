@@ -31,7 +31,7 @@ const SkillSection = () => {
             transition={{ duration: 2 }}
         >
             <header className='text-center text-5xl p-20'>Skills</header>
-            <ul style={{perspective: '1000px', transformStyle: 'preserve-3d'}} className='flex space-x-5 justify-center '>
+            <ul style={{perspective: '1000px', transformStyle: 'preserve-3d'}} className='flex space-x-5 justify-center pt-12 overflow-x-hidden pb-12'>
                 {skills.map((skill, index) => (
                     <motion.li
                         whileHover={{
@@ -41,12 +41,9 @@ const SkillSection = () => {
                         key= { index }
                     >
                         <div className='bg-gray-600 rounded-2xl w-32 h-32'>
-                        <div className='justify-center flex'>
-                            <img src={skill.icon} style={{ height: '120px'}}/>
-                        </div>
-                        
-
-                        
+                            <div className='justify-center flex'>
+                                <img src={skill.icon} style={{ height: '120px'}}/>
+                            </div>
                         </div>
                         <motion.div id='bubble' className='text-center mt-2 bg-slate-800 rounded-full justify-center w-fit px-4 mx-auto'>
                             {!showBubble && skill.label}
