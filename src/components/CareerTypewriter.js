@@ -2,7 +2,7 @@ import { type } from "@testing-library/user-event/dist/type";
 import React, { useState, useEffect } from "react";
 import Typewriter from 'typewriter-effect';
 
-const CareerTypewriter = ( {}) => {
+const CareerTypewriter = () => {
     const [typewriterStyle, setTypewriterStyle] = useState({
         fontFamily: 'Arial, sans-serif',
         fontSize: '2em',
@@ -62,8 +62,8 @@ const CareerTypewriter = ( {}) => {
                     deleteSpeed: 20,
                 }}
                 onInit={(typewriter) =>{
+                    typewriter.pauseFor(300)
                     typewriter.typeString('Hi!')
-                    .pauseFor(400)
                     .typeString(' My name is <span style="color: greenyellow;">Madison Manuel.</span>\n')
                     .pauseFor(750)
                     .typeString(' I am a ')
