@@ -31,7 +31,7 @@ const SkillSection = () => {
             transition={{ duration: 2 }}
         >
             <header className='text-center text-5xl p-20'>Skills</header>
-            <ul style={{perspective: '1000px', transformStyle: 'preserve-3d'}} className='flex space-x-5 justify-center pt-12 overflow-x-hidden pb-12'>
+            <ul style={{perspective: '1000px', transformStyle: 'preserve-3d'}} className='flex space-x-7 justify-center pt-12 overflow-x-hidden pb-12'>
                 {skills.map((skill, index) => (
                     <motion.li
                         whileHover={{
@@ -40,7 +40,7 @@ const SkillSection = () => {
                         }}
                         key= { index }
                     >
-                        <div className='bg-gray-600 rounded-2xl w-32 h-32'>
+                        <div style={{boxShadow: '0 0 15px greenyellow'}} className='bg-gray-600 rounded-2xl w-32 h-32'>
                             <div className='justify-center flex'>
                                 <img src={skill.icon} style={{ height: '120px'}}/>
                             </div>

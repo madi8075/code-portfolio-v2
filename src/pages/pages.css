@@ -1,0 +1,9 @@
+.code-font {
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .code-font {
+        font-size: .7em;
+    }
+}

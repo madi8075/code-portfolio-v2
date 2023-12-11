@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Programs from "../components/Programs";
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import './pages.css'
+
 
 const ProjectSection = () => {
     const [currTab, setTab] = useState(0);
-    
+    const codeString = '(num) => num + 1';
+
     let projects = [
-        { id: 0, title: 'SneakyQueens', fileName: 'queens.java', lang: 'Java', program: 
+        { id: 0, title: 'SneakyQueens', fileName: 'queens.java', langT: 'Java', lang: 'java', program: 
         `import java.util.*;
 
         public class SneakyQueens
@@ -117,10 +122,10 @@ const ProjectSection = () => {
             return true;
           }
         }`},
-        { id: 1, title: 'RunLikeHell', fileName: 'run.java', lang: 'Java'},
-        { id: 2, title: 'Checksum Processing', fileName: 'checksum.c', lang: 'C'},
-        { id: 3, title: 'Stack Machine', fileName: 'stack.c', lang: 'C'},
-        { id: 4, title: 'Akcija Kattis Project', fileName: 'akcija.c', lang: 'C'},
+        { id: 1, title: 'RunLikeHell', fileName: 'run.java', langT: 'Java', lang: 'java'},
+        { id: 2, title: 'Checksum Processing', fileName: 'checksum.c', langT: 'C', lang: 'c'},
+        { id: 3, title: 'Stack Machine', fileName: 'stack.c', langT: 'C', lang: 'c'},
+        { id: 4, title: 'Akcija Kattis Project', fileName: 'akcija.c', langT: 'C', lang: 'c'},
     ];
 
 
@@ -135,19 +140,27 @@ const ProjectSection = () => {
                 <h1 className="flex justify-center text-5xl pt-64 pb-24">Programs</h1>
 
                 <div className="flex flex-row flex-wrap pb-64 justify-center gap-12">
-                    <div className=" h-auto w-1/3 flex-grow-[0.5] lg: ml-8 items-center self-center lg:text-xl leading-loose">
-                        <h2 className="text-purple-600 font-semibold tracking-widest lg:text-4xl">{projects[currTab].title}</h2>
-                        <h1 className="text-lime-400 lg:text-2xl">{projects[currTab].lang}</h1>
+
+                    <div className=" h-auto w-1/3 flex-grow-[0.5] lg: ml-8 items-center self-center lg:text-xl">
+
+                        <h2 className="text-purple-600 font-semibold tracking-widest text-2xl lg:text-4xl mb-2">
+                            {projects[currTab].title}
+                        </h2>
+
+                        <h1 className="text-lime-400 text-lg lg:text-2xl mb-2">
+                            {projects[currTab].langT}
+                        </h1>
+
                         <p>Return if any of the queens can attack each other on a chess board. I had to solve the math problem for the rows and be careful of time/space complexity.</p>
                     </div>
 
-                    <div className="bg-slate-950 w-5/6 h-[700px] lg:w-[1000px] lg: mr-8">
+                    <div style={{boxShadow:'0 0 60px rgba(128, 0, 128, 0.6)'}} className=" mt-8 ml-8 rounded-sm bg-slate-950 w-5/6 h-[700px] lg:w-[1000px] lg: mr-8 shadow-2xl">
                         
                         <div className="flex border-b border-slate-700">
                             { projects.map((tab, index) =>
                                 <motion.button 
-                                    className={`${index < projects.length - 1 ? 'border-r' : ''} flex-grow border-slate-700 p-2 hover:bg-purple-300 hover:bg-opacity-50
-                                        ${ currTab === tab.id ? 'bg-slate-800 border-b-blue-400 border-b-[1.5px] text-purple-300 font-semibold' : ''}`}
+                                    className={`${index < projects.length - 1 ? 'border-r' : ''} text-xs lg:text-lg tracking-wide flex-grow border-slate-700 p-2 hover:bg-purple-300 hover:bg-opacity-50
+                                        ${ currTab === tab.id ? 'bg-slate-800 border-b-purple-600 border-b-[1.5px] text-purple-300 font-semibold' : ''}`}
                                     onClick= {() => setTab(tab.id)}
                                     key={tab.id}
                                 >
@@ -155,10 +168,22 @@ const ProjectSection = () => {
                                 </motion.button>
                             )}
                         </div>
-
-                        <div className="m-2">
-                                Content
-                        </div>
+                      
+                      <div>
+                        <SyntaxHighlighter
+                          language={projects[currTab].lang} 
+                          style={nightOwl}
+                          customStyle={{ 
+                            overflow: 'auto', 
+                            maxHeight: '667px',
+                          }}
+                          className='code-font'
+                          showLineNumbers={true}
+                          tabSize={1}
+                        >
+                          {projects[0].program}
+                        </SyntaxHighlighter>
+                      </div>
 
                     </div>
 
