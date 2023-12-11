@@ -35,17 +35,11 @@ const Home = () => {
         </div>
         </AnimatePresence>
 
-        <AnimatePresence>
             <SkillSection />
-        </AnimatePresence>
 
-        <AnimatePresence>
             <ProjectSection />
-        </AnimatePresence>
 
-        <AnimatePresence>
             <Contact/>
-        </AnimatePresence>
 
         
     </>

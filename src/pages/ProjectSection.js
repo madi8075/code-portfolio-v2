@@ -4,6 +4,7 @@ import Programs from "../components/Programs";
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import './pages.css'
+import '../fonts/fonts.css'
 
 
 const ProjectSection = () => {
@@ -131,17 +132,27 @@ const ProjectSection = () => {
 
     return (
         <div className='bg-neutral-900 text-white'>
-            <motion.div
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                exit={{opacity: 0}}
-                transition={{ duration: 1}}
-            >
-                <h1 className="flex justify-center text-5xl pt-64 pb-24">Programs</h1>
+            <motion.div>
+                <motion.h1
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{once: true}}
+                  exit={{opacity: 0}}
+                  transition={{ duration: 1}}
+                  className="flex justify-center text-6xl lg:text-8xl pt-64 pb-24 neon"
+                >
+                  Programs
+                </motion.h1>
 
                 <div className="flex flex-row flex-wrap pb-64 justify-center gap-12">
 
-                    <div className=" h-auto w-1/3 flex-grow-[0.5] lg: ml-8 items-center self-center lg:text-xl">
+                    <motion.div
+                      initial={{ opacity: 0, x: '-100%' }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: .4}}
+                      className=" h-auto w-1/3 flex-grow-[0.5] lg: ml-8 items-center self-center lg:text-xl"
+                    >
 
                         <h2 className="text-purple-600 font-semibold tracking-widest text-2xl lg:text-4xl mb-2">
                             {projects[currTab].title}
@@ -152,9 +163,16 @@ const ProjectSection = () => {
                         </h1>
 
                         <p>Return if any of the queens can attack each other on a chess board. I had to solve the math problem for the rows and be careful of time/space complexity.</p>
-                    </div>
+                    </motion.div>
 
-                    <div style={{boxShadow:'0 0 60px rgba(128, 0, 128, 0.6)'}} className=" mt-8 ml-8 rounded-sm bg-slate-950 w-5/6 h-[700px] lg:w-[1000px] lg: mr-8 shadow-2xl">
+                    <motion.div
+                      initial={{ opacity: 0, x: '100%' }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: .8}}
+                      style={{boxShadow:'0 0 60px rgba(128, 0, 128, 0.6)'}} 
+                      className=" mt-8 ml-8 rounded-sm bg-slate-950 w-5/6 h-[700px] lg:w-[1000px] lg: mr-8 shadow-2xl"
+                    >
                         
                         <div className="flex border-b border-slate-700">
                             { projects.map((tab, index) =>
@@ -185,7 +203,7 @@ const ProjectSection = () => {
                         </SyntaxHighlighter>
                       </div>
 
-                    </div>
+                    </motion.div>
 
                 </div>
             </motion.div>

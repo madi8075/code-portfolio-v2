@@ -1,0 +1,23 @@
+@font-face {
+    font-family: neon;
+    src: url(./NEON____.TTF);
+}
+
+.neon {
+    font-family: neon;
+    animation: neon 2.5s linear infinite;
+    -moz-animation: neon 2.5s linear infinite;
+    -webkit-animation: neon 2.5s linear infinite;
+    -o-animation: neon 2.5s linear infinite;
+}
+
+@keyframes neon {
+    0%, 100% {
+        text-shadow: 0 0 0.25vw #8A2BE2, 0 0 0.75vw #8A2BE2, 0 0 2.5vw #8A2BE2, 0 0 2.5vw #8A2BE2, 0 0 0.1vw #9932CC, 0.25vw 0.25vw 0.05vw #800080;
+        color: #d8bfd6; /* Lighter shade of purple */
+    }
+    50% {
+        text-shadow: 0 0 0.125vw #800080, 0 0 0.375vw #800080, 0 0 1.25vw #800080, 0 0 1.25vw #800080, 0 0 0.05vw #800080, 0.125vw 0.125vw 0.025vw #4B0082; /* Darker shade of purple */
+        color: #AA46D6; /* Light yellow during glowing phase for better contrast */
+    }
+  }

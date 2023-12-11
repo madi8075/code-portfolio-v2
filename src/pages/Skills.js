@@ -1,6 +1,7 @@
 import { animate, motion, useMotionValue } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import  ReactSVG  from '../SVG/react.svg';
+import '../fonts/fonts.css'
 
 const SkillSection = () => {
 
@@ -24,14 +25,25 @@ const SkillSection = () => {
 
     return (
         <div className='bg-neutral-900 text-white pb-12'>
-        <motion.section
-            initial ={{opacity: 0}}
-            animate = {{opacity: 1}}
-            exit={{opacity: 0}}
-            transition={{ duration: 2 }}
-        >
-            <header className='text-center text-5xl p-20'>Skills</header>
-            <ul className=' list-none flex flex-wrap space-x-7 justify-center pt-12 overflow-x-hidden pb-6'>
+        <motion.section>
+            <motion.header
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{once: true}}
+                exit={{opacity: 0}}
+                transition={{ duration: .7}}
+                className='text-center text-7xl lg:text-9xl lg:p-20 neon'
+            >
+                Skills
+            </motion.header>
+            <motion.ul
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{once: true}}
+                exit={{opacity: 0}}
+                transition={{ duration: .7}}
+                className=' list-none flex flex-wrap space-x-10 justify-center pt-12 overflow-x-hidden pb-6'
+            >
                 {skills.map((skill, index) => (
                     <motion.li
                         whileHover={{
@@ -50,7 +62,7 @@ const SkillSection = () => {
                         </motion.div>
                     </motion.li>
                 ))}
-            </ul>
+            </motion.ul>
 
         </motion.section>
         </div>
