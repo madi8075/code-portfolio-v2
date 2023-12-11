@@ -38,13 +38,13 @@ const CareerTypewriter = () => {
       }, []);
 
     let careers =[
-        { label: "computer science student." },
-        { label: "programmer." },
-        { label: "full-stack developer." },
-        { label: "problem solver." },
-        { label: "leader." },
-        { label: "hardware expert." },
-        { label: "software expert." },
+        { label: '<span style="color: #AA46D6;">computer science student.</span>' },
+        { label: '<span style="color: #AA46D6;">programmer.</span>' },
+        { label: '<span style="color: #AA46D6;">full-stack developer.</span>' },
+        { label: '<span style="color: #AA46D6;">problem solver.</span>' },
+        { label: '<span style="color: #AA46D6;">leader.</span>' },
+        { label: '<span style="color: #AA46D6;">hardware expert.</span>' },
+        { label: '<span style="color: #AA46D6;">software expert.</span>' },
     ];
 
     const wrapperStyle = {
@@ -73,17 +73,17 @@ const CareerTypewriter = () => {
                         typewriter
                             .typeString(tab.label)
                             .pauseFor(1500)
-                            .deleteChars(careers[index].label.length)
+                            .deleteChars(careers[index].label.length-37)
                             .pauseFor(200)
                     });
 
-                    typewriter.deleteChars(2)
-                    .typeString('<span style="color: greenyellow;">excited to join your team!</span>')
+                    typewriter.deleteChars(5)
+                    .typeString('<span style="color: #AA46D6;">excited to join your team!</span>')
                     .pauseFor(2000)
                     .deleteChars(32)
-                    .typeString('<span style="color: greenyellow;">Let me show you what I can do</span>')
+                    .typeString('<span style="color: #AA46D6;">Let me show you what I can do</span>')
                     .changeDelay(375)
-                    .typeString('<span style="color: greenyellow;">...</span>')
+                    .typeString('<span style="color: #AA46D6;">...</span>')
                 } }
             />
         </div>
