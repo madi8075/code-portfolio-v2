@@ -12,7 +12,6 @@ function App() {
     
     <div>
       <Router>
-        <Navbar />
         <Routes>
           <Route exact path='/code-portfolio-v2/' Component={Home}/>
           <Route path='/code-portfolio-v2/projects' Component={Projects}/>

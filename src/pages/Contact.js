@@ -15,7 +15,17 @@ const Contact = () => {
             exit={{opacity: 0}}
             transition={{ duration: 2}}
             >
-                <div className='text-center mt-60 h-20'>
+                <motion.header
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{once: true}}
+                    exit={{opacity: 0}}
+                    transition={{ duration: .7}}
+                    className='text-center text-7xl lg:text-9xl lg:pt-36 neon'
+                >
+                    Contact
+                </motion.header>
+                <div className='text-center mt-40 h-20'>
                         <MainTypewriter content={'You just found what you\'ve been looking for.'} flag={true} content1={'<span style="color: greenyellow;">\nLet\'s talk.</span>'}/>
                 </div>
                 <SocialButton />
